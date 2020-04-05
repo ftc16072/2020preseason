@@ -29,11 +29,9 @@ class QQ_TestColorSensor extends QQ_Test {
      */
     @Override
     void run(boolean on, Telemetry telemetry) {
-        if (on) {
             telemetry.addData(getDescription(), "%d %d %d",
                             colorSensor.red(),
                             colorSensor.green(),
                             colorSensor.blue());
-      }
     }
 }
