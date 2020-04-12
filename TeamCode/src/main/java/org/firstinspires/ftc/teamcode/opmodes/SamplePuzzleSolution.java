@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.opmodes;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.mechanisms.PuzzleProgrammingBoard;
 
@@ -10,6 +11,7 @@ import org.firstinspires.ftc.teamcode.mechanisms.PuzzleProgrammingBoard;
  * half.
  * Puzzle level: Easy
  */
+@TeleOp()
 public class SamplePuzzleSolution extends OpMode {
     private PuzzleProgrammingBoard board = new PuzzleProgrammingBoard();
 
