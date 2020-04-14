@@ -21,4 +21,13 @@ public class PuzzleProgrammingBoard extends ProgrammingBoard {
         double pos = Range.scale(angle, 0, 180, 0.0, 1.0);
         servo.setPosition(pos);
     }
+
+    /**
+     * This returns the angle of the potentiometer
+     *
+     * @return angle of the potentiometer in [0..270]
+     */
+    public double getPotAngle() {
+        return Range.scale(pot.getVoltage(), 0, pot.getMaxVoltage(), 0, 270);
+    }
 }
