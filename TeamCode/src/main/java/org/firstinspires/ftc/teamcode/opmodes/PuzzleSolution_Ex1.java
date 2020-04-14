@@ -20,11 +20,10 @@ public class PuzzleSolution_Ex1 extends OpMode {
 
     @Override
     public void loop() {
-       if(gamepad1.a){
-           board.setMotorSpeed(0.5);
-       }
-       else{
-           board.setMotorSpeed(0);
-       }
+        if (gamepad1.a) {
+            board.setMotorSpeed(0.5);
+        } else {
+            board.setMotorSpeed(0);
+        }
     }
 }
