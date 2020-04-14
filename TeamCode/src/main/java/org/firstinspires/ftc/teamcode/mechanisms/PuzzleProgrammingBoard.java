@@ -1,5 +1,7 @@
 package org.firstinspires.ftc.teamcode.mechanisms;
 
+import com.qualcomm.robotcore.util.Range;
+
 public class PuzzleProgrammingBoard extends ProgrammingBoard {
     /**
      * This allows you to set the speed of the motor on the programing board.
@@ -8,5 +10,15 @@ public class PuzzleProgrammingBoard extends ProgrammingBoard {
      */
     public void setMotorSpeed(double speed) {
         motor.setPower(speed);
+    }
+
+    /**
+     * Sets our servo to a given angle
+     * @param angle angle between 0 and 180 degrees
+     */
+
+    public void setServoAngle(double angle) {
+        double pos = Range.scale(angle, 0,180,0,1);
+        servo.setPosition(pos);
     }
 }
