@@ -17,8 +17,19 @@ public class PuzzleProgrammingBoard extends ProgrammingBoard {
      *
      * @param angle set the angle of the servo on the board
      */
-    public void setServoAngle(double angle){
-        double pos = Range.scale(angle,0,180,0,1);
+    public void setServoAngle(double angle) {
+        double pos = Range.scale(angle, 0, 180, 0, 1);
         servo.setPosition(pos);
+
+    }
+
+    /**
+     * returns the angle of the pot
+     *
+     * @return angle of the pot from 0-270
+     */
+    public double getPotAngle() {
+        return Range.scale(pot.getVoltage(), 0, pot.getMaxVoltage(), 0, 270);
+
     }
 }
