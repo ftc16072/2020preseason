@@ -27,8 +27,16 @@ public class PuzzleProgrammingBoard extends ProgrammingBoard {
      * @return angle of the potentiometer in [0..270]
      */
     public double getPotAngle(){
-        return Range.scale(pot.getVoltage(),0,pot.getMaxVoltage(),0,270)
-
+        return Range.scale(pot.getVoltage(),0,pot.getMaxVoltage(),0,270);
 
     }
+
+    public boolean isGreen(){
+        return sensorColor.green() > 185
+    }
+
+    public boolean isRed(){
+        return sensorColor.red() >185
+    }
+
 }
