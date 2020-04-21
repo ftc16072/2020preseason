@@ -2,6 +2,8 @@ package org.firstinspires.ftc.teamcode.mechanisms;
 
 import com.qualcomm.robotcore.util.Range;
 
+import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
+
 public class PuzzleProgrammingBoard extends ProgrammingBoard {
     /**
      * This allows you to set the speed of the motor on the programing board.
@@ -14,18 +16,30 @@ public class PuzzleProgrammingBoard extends ProgrammingBoard {
 
     /**
      * sets servo to a different angle
+     *
      * @param angle angle between 0 and 180 degrees
      */
-    public void setServoAngle(double angle){
+    public void setServoAngle(double angle) {
         double pos = Range.scale(angle, 0, 180, 0.0, 1.0);
-servo.setPosition(pos);
+        servo.setPosition(pos);
     }
 
     /**
      * this returns the angle of the pot
+     *
      * @return
      */
-    public double getPotAngle(){
-return Range.scale(pot.getVoltage(), 0, pot.getMaxVoltage(), 0, 270);
+    public double getPotAngle() {
+        return Range.scale(pot.getVoltage(), 0, pot.getMaxVoltage(), 0, 270);
+    }
+
+
+    /**
+     * this returns the distance away from the distance sensor
+     *
+     * @return
+     */
+    public double getDistance() {
+        return sensorDistance.getDistance(DistanceUnit.INCH);
     }
 }
