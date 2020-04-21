@@ -22,7 +22,7 @@ public class SamplePuzzleSolution extends OpMode {
 
     @Override
     public void loop() {
-        if (colorsensor) {
+        if (gamepad1.a) {
             board.setServoAngle(0);
         } else if (gamepad1.y){
             board.setServoAngle(90);

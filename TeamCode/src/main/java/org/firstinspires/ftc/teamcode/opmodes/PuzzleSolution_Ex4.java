@@ -27,7 +27,8 @@ public class PuzzleSolution_Ex4 extends OpMode {
         else if (board.isRed()) {
             board.setMotorSpeed(0);
         }
-        else
+        else {
             board.setMotorSpeed(0.5);
+        }
     }
 }

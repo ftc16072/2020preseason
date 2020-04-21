@@ -32,11 +32,11 @@ public class PuzzleProgrammingBoard extends ProgrammingBoard {
     }
 
     public boolean isGreen(){
-        return sensorColor.green() > 185
+        return sensorColor.green() > 185;
     }
 
     public boolean isRed(){
-        return sensorColor.red() >185
+        return sensorColor.red() >185;
     }
 
 }

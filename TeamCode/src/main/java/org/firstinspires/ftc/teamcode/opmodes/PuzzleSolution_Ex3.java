@@ -23,6 +23,6 @@ public class PuzzleSolution_Ex3 extends OpMode {
     @Override
     public void loop() {
         double angle = board.getPotAngle();
-        board.setServoAngle(Range.scale(angle,0,180));
+        board.setServoAngle(Range.scale(angle,0,180, 0, 1));
     }
 }
