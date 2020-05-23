@@ -8,6 +8,7 @@ public class HelloOpmode extends OpMode {
     @Override
     public void init() {
         telemetry.addData( "Hello", "World");
+
     }
 
     @Override
