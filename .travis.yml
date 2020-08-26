@@ -1,8 +1,6 @@
-sudo: required
 language: android
+dist: trusty
 install:
-  - sudo mkdir /usr/local/android-sdk/licenses
-  - sudo cp travis_licenses/android-sdk-license /usr/local/android-sdk/licenses/
   - cp travis_licenses/licenses.xml TeamCode/src/main/res/values/licenses.xml
 android:
   components:
@@ -10,5 +8,3 @@ android:
     - android-28
     - extra-google-m2repository
     - extra-android-m2repository
-    - addon-google_apis-google-19
-    - android-N
